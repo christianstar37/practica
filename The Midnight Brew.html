@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Brew</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/218/218230.png">
+    <link href="https://fonts.cdnfonts.com/css/winter-solstice" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/motor4f" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/fredo-manuscrite" rel="stylesheet">
+                
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        body {
+            background-color: #1d101c;
+            color: #e6e6e6;
+            font-family: 'Motor4F', sans-serif;
+            /* line-height: 1.6; */
+        }
+
+        header {
+            height: 300px;
+            overflow: hidden;
+        }
+
+        header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        h1#title {
+            font-family: 'Winter Solstice', serif;
+            text-align: center;
+            font-size: 5rem;
+            color: #a10035;
+            margin: 20px 0;
+            text-shadow: 2px 2px 8px black;
+        }
+
+        nav {
+            background-color: #a1003686;
+            padding: 10px 0;
+            text-align: center;
+            font-family: 'Winter Solstice', serif;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 2rem;
+            color: #e6e6e6;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #a10035;
+            text-shadow: 0 0 10px #a10035;
+        }
+
+        main {
+            padding: 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            font-family: 'Winter Solstice', serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #a10035;
+        }
+
+        .drinks-card, .sweets-card {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .drink, .sweet {
+            background-color: #090909;
+            border: 2px solid #a10035;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(161, 0, 53, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .drink:hover, .sweet:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(161, 0, 53, 0.8);
+        }
+
+        .drink img, .sweet img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .drink h3, .sweet h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #e6e6e6;
+        }
+
+        .drink p, .sweet p {
+            margin: 5px 0;
+        }
+
+        form {
+            background-color: #1a1a1a;
+            border: 2px solid #a10035;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 15px rgba(161, 0, 53, 0.5);
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #e6e6e6;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #a10035;
+            border-radius: 5px;
+            background-color: #0b0b0b;
+            color: #e6e6e6;
+        }
+
+        form input[type="checkbox"], form input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        form input[type="submit"] {
+            background-color: #a10035;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #e6004c;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #a1003686;
+            color: #888;
+            margin-top: 40px;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+            color: #080808;
+        }
+    </style>
+
+</head>
+<body>
+    <header id="header-img">
+        <img src="https://i.redd.it/we7vknbzf0qd1.gif" alt="">
+    </header>
+    <h1 id="title">The Midnight Brew</h1>
+    <nav>
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#order-form">Order</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <article id="drinks">
+                <article class="drinks-card">
+                    <article class="drink">
+                        <figure class="drink-photo">
+                            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3VocG02bXlub295YzBkZGZhNHBlNXh4eW9iaHJlOWNvNm00ZDM5eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/KE4LRg48nL60InfHMo/giphy.gif" alt="drink1">
+                        </figure>
+                        <h3>Black Heart Boba Tea</h3>
+                        <p>A dark, velvety boba tea with mysterious undertones.</p>
+                        <p><em>10$</em></p>
+                    </article>
+                    <article class="drink">
+                        <figure class="drink-photo">
+                            <img src="https://i.pinimg.com/originals/31/ee/4a/31ee4a1084b570ebe48a1d2ee0f5a70a.gif" alt="drink2">
+                        </figure>
+                        <h3>Soul Reaper Elixir</h3>
+                        <p>A hauntingly sweet drink that lingers like a shadow.</p>
+                        <p><em>10$</em></p>
+                    </article>
+                </article>
+            </article>
+            <article id="sweets">
+                <article class="sweets-card">
+                    <article class="sweet">
+                        <figure class="sweet-photo">
+                            <img src="https://i.pinimg.com/originals/08/1e/d6/081ed6bf5f748c997e2d80b248469eed.gif" alt="">
+                        </figure>
+                        <h3>Crimson Hibiscus Roll cake</h3>
+                        <p>A blood-red hibiscus cake, soft as a whispered secret.</p>
+                        <p><em>20$</em></p>
+                    </article>
+                    <article class="sweet">
+                        <figure class="sweet-photo">
+                            <img src="https://i.pinimg.com/originals/85/dd/bc/85ddbc0f18ab736c46d712b852947581.gif" alt="">
+                        </figure>
+                        <h3>Eternal Midnight Parfait</h3>
+                        <p>Layers of dark chocolate and berries, as timeless as the night.</p>
+                        <p><em>20$</em></p>
+                    </article>
+                </article>
+            </article>
+        <section id="order-form">
+            <h2>Place Your Order</h2>
+            <form action="" method="dialog">
+                <label for="buy-drink">Which drink would you buy?</label>
+                <input type="checkbox">drink1
+                <input type="checkbox">drink2
+                <label for="drink-quantity">How many do you need?</label>
+                <input type="number">
+                <label for="buy-sweets">Which sweets would you buy?</label>
+                <input type="checkbox">sweet1
+                <input type="checkbox">sweet2
+                <label for="sweets-quantity">How many do you need?</label>
+                <input type="number">
+                <label for="delivery-mode">Would you like to:</label>
+                <input type="radio" name="option"> To-Go
+                <input type="radio" name="option"> Dine-In
+                <label for="special-requests">Any Special Requests:</label>
+                <textarea name="" id="" cols="30"></textarea>
+                <input type="submit" value="Go To Checkout">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>
+            Made with 💓 by Nupur.
+        </p>
+    </footer>
+</body>
+</html>
