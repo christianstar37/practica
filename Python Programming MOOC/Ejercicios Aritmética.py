@@ -85,5 +85,5 @@ print(5 + 8 - 4)
 #print(f"La suma es {sum} y su media es {sum / 4}")
 
 #estudiantes = int(input("Cuántos estudiantes hay? "))
-#tamaño = int(input("De qué tamaño quieres los grupos? "))
-#print(f"El número de grupos formados es de {estudiantes // tamaño}.")
+# tamaño = int(input("De qué tamaño quieres los grupos? "))
+# print(f"El número de grupos formados es de {estudiantes // tamaño}.")
