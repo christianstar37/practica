@@ -1,13 +1,23 @@
-import turtle
+import turtle as t
+wn = t.Screen()
+red = t.Turtle()
+t.speed(10)
+def curve():
+    for i in range(200):
+        red.right(1)
+        red.forward(1)
 
-t = turtle.Turtle()
+def heart():
+    red.fillcolor('purple')
+    red.begin_fill()
+    red.left(140)
+    red.forward(113)
+    curve()
+    red.left(120)
+    curve()
+    red.forward(112)
+    red.end_fill()
 
-i = 0
-
-while 0 == 0:
-    t.forward(200)
-    t.left(100)
-    t.forward(50)
-    i += 1
-
-turtle.done()
+heart()
+red.ht()
+t.done()
