@@ -5,7 +5,8 @@ eres_tu = input('¿Eres Rocío? [Y/N] ').upper()
 if eres_tu == 'Y':
     wn = t.Screen()
     red = t.Turtle()
-    t.speed(0)
+    t.speed('fastest')
+    wn.tracer(0)
     def curve():
         for i in range(200):
             red.right(1)
@@ -28,11 +29,11 @@ if eres_tu == 'Y':
 
 
 print('')    
-input('Os vas a hinchar a pulsar ENTER cada vez que veas una línea como esta... preparados? (Pulsa ENTER)')
+input('Os vais a hinchar a pulsar ENTER cada vez que veas una línea como esta... preparados? (Pulsa ENTER)')
 input('¿Qué sería de una pijamada de las nuestras sin un buen... BESAR, CASAR Y MATAR?')
 input('Me he hinchado pero he hecho unas cuantas "bolsitas" de nuestros típicos papelitos.')
 
-def elegir_fandom():
+def elegir_fandom(condicion):
     input('Aquí podéis elegir con que fandom queéis jugar. Lo que vereís entre paréntesis es el número de personajes que tiene cada uno, debería ser multiplo de 3... En caso de no serlo echadle la culpa al Christian del pasado, no al majo ese que tenéis al lado.')
     seguro = 'N'
     while seguro != 'Y':
@@ -89,7 +90,7 @@ def elegir_fandom():
         Series = ['Nesta', 'Cassian', 'Feyre', 'Rhysand', 'Mor', 'Amren', 'Tamlin', 'Elaine', 'Lucian', 'Azriel', 'Gwyn', 'El Suriel']
         Cine = ['Anastasia' , 'Dimitri', 'Satine', 'Christian (Moulin Rouge)', 'Morticia', 'Gomez', 'Mor', 'Amren', 'Tamlin', 'Elaine', 'Lucian', 'Azriel', 'Gwyn', 'El Suriel']
         Cine_Rocio = ['Anastasia' , 'Dimitri', 'Satine', 'Christian (Moulin Rouge)', 'Morticia', 'Gomez']
-        
+# stranger things, kusuriya, fmab, got, true blood, los 100, casa de papel, spy x family, hunter x hunter, tensura, lol, stardew, once upon a time, trollhunters, marvel, disney en general, sonic, fairy tail, juegos del hambre
 
         if conjunto == 1:
             fandom = Helluva_Boss
@@ -124,7 +125,7 @@ def elegir_fandom():
         elif conjunto == 11:
             fandom = Series
             bolsita = 'seriazas'
-        elif conjunto == 12 and eres_tu == 'Y':
+        elif conjunto == 12 and condicion == 'Y':
             fandom = Cine_Rocio
             bolsita = 'Cine de mi persona favorita'
         elif conjunto == 12:
@@ -157,7 +158,6 @@ def elegir_fandom():
             pass
 
         print('')
-        print(len(fandom))
         seguro = input('Habéis elegido la bolsita: ' + bolsita + '. Estáis seguros? [Y/N] ').upper()
 
     if secreto == 0:
@@ -196,11 +196,10 @@ seguir = 'Y'
 while seguir == 'Y':
     ronda = 0
     
-    nombres = elegir_fandom()
+    nombres = elegir_fandom(eres_tu)
     random.shuffle(nombres)
 
     print('')
-
     input("Pulsa ENTER para empezar ")
 
     # Esto es lo que genera las rondas
