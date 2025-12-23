@@ -1,23 +1,14 @@
-prueba = 'prueba de mayúsculas por cada letra'
-prueba_2 = 'hoy en clase nos han cambiado de sitio'
+prueba = ' Prueba de mayúsculas por cada letra. '
+prueba_2 = ' Hoy en clase nos han cambiado de sitio. '
 
-def capitalize_title(title):
-    """Convert the first letter of each word in the title to uppercase if needed.
+def clean_up_spacing(sentence):
+    """Verify that there isn't any whitespace at the start and end of the sentence.
 
-    :param title: str - title string that needs title casing.
-    :return: str - title string in title case (first letters capitalized).
+    :param sentence: str - a sentence to clean of leading and trailing space characters.
+    :return: str - a sentence that has been cleaned of leading and trailing space characters.
     """
+    
+    return sentence.strip(' ')
 
-    palabras = title.split()
-    primera_mayus = ''
-    for palabra in palabras:
-        for i, char in enumerate(palabra):
-            if i == 0:
-                primera_mayus += char.upper()
-            else:
-                primera_mayus += char
-        primera_mayus += ' '
-    return primera_mayus.strip()
-
-print(capitalize_title(prueba))
-print(capitalize_title(prueba_2))
+print(clean_up_spacing(prueba))
+print(clean_up_spacing(prueba_2))
